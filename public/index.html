@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game On!</title>
+
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="/public/index.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="homeController as hc">
+        <div>{{hc.title}}</div>
+        <div ng-repeat="item in hc.hotList">
+            <p>Ranking: {{item.rank}}</p>
+            <p>Name: {{item.name}}</p>
+            <p>Published: {{item.yearPublished}} </p>
+            <div item-height="200px">
+                <img src="{{item.thumbnail}}" style="width: auto; height: 100%;">
+            </div>
+            <p>---------------------------------------------</p>
+        </div>
+    </div>
+</body>
+</html>
